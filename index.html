@@ -4,48 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corecleen - Landing Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        #hero { background-color: #f4f4f4; padding: 50px; text-align: center; }
-        section { padding: 50px; }
-        footer { background-color: #333; color: white; text-align: center; padding: 20px; }
-    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/icons/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/icons/css/brands.css" rel="stylesheet">
+    <link href="assets/icons/css/solid.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
-    <section id="hero">
-        <h1>Welcome to Corecleen</h1>
-        <p>Your solution for clean and efficient services.</p>
-        <button>Get Started</button>
+    <section id="hero__section">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                
+                <a href="" id="navbar__logo"><i class="fas fa-broom"></i>CORECLEEN</a>
+
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            
+                <ul class="navbar__menu">
+                    <li class="navbar__item"><a class="navbar__link" href="#features">Features</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#testimonials">Testimonials</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1>Welcome to <div>Corecleen</div></h1>
+                    
+                    <p>Your solution for clean and efficient services.</p>
+                    <button class="hero__btn"><a href="#contact">Get Started</a></button>
+                </div>
+                <div class="hero__image-container">
+                    <img src="images/hero-image.svg" alt="Hero Image" id="hero__image">
+                </div>
+            </div>
+        </div>
+
+        
     </section>
     
-    <section id="features">
-        <h2>Features</h2>
-        <div>
-            <h3>Feature 1</h3>
-            <p>Description of feature 1.</p>
+    <section id="features__section">
+        <h2>Our Services</h2>
+        <div class="features">
+
+            <div class="feature__card">
+                <i class="fas fa-check-circle feature-icons fa-4x"></i>
+                <h3>Office Cleaning</h3>
+                <p>Keep your workplace spotless with our professional office cleaning services.</p>
+            </div>
+            <div class="feature__card">
+                <i class="fas fa-check-circle feature-icons fa-4x"></i>
+                <h3>Commercial Deep Cleaning</h3>
+                <p>Our comprehensive commercial cleaning services ensure every corner of your space is spotless.</p>
+            </div>
+            <div class="feature__card">
+                <i class="fas fa-check-circle feature-icons fa-4x"></i>
+                <h3>Garbage Collection</h3>
+                <p>Our efficient garbage collection services keep your space clean and organized.</p>
+            </div>
+
         </div>
-        <div>
-            <h3>Feature 2</h3>
-            <p>Description of feature 2.</p>
-        </div>
-        <div>
-            <h3>Feature 3</h3>
-            <p>Description of feature 3.</p>
+                
+    </section>
+    
+    <section id="testimonials__section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial__card">
+                <i class="fas fa-quote-left testimonial-icon fa-2x"></i>
+                <h3>John Doe</h3>
+                <p>"Corecleen transformed our office! Highly recommend their services. The team is professional, efficient, and truly cares about quality. We've been using them for 6 months now and couldn't be happier!""</p>  
+            </div>
+
+            <div class="testimonial__card">
+                <i class="fas fa-quote-left testimonial-icon fa-2x"></i>
+                <h3>Emily Johnson</h3>
+                <p>
+                    "After a long & tiring day, nothing
+                    beats coming home to a clean and
+                    spotless space. Corecleen is my go-to for all my cleaning needs!"
+                </p>
+            </div>
+            
         </div>
     </section>
     
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <blockquote>
-            <p>"Great service!" - Customer 1</p>
-        </blockquote>
-        <blockquote>
-            <p>"Highly recommend." - Customer 2</p>
-        </blockquote>
-    </section>
-    
-    <footer id="footer">
+    <section id="contact">
         <p>&copy; 2023 Corecleen. All rights reserved.</p>
-    </footer>
+    </section>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
