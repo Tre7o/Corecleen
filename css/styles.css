@@ -296,6 +296,10 @@ html, body {
     font-weight: 900;
 }
 
+.navbar__logo i {
+    margin-right: 0.5rem;
+}
+
 .fa-gem{
     margin-right: 0.5rem;
 }
