@@ -122,6 +122,29 @@
         padding: 15px 30px;
         font-size: 1.5rem;
     }
+
+    .footer{
+        display: grid;
+        grid-template-columns: auto !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .footer__contact h2 {
+        text-align: center !important;
+        margin-top: 50px !important;
+    }
+
+    .footer__contact-items {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -161,6 +184,55 @@
     .hero__btn {
         padding: 15px 30px;
         font-size: 1rem;
+    }
+
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 20px;
+    }
+
+    .footer__contact {
+        text-align: left !important;
+    }
+
+    .footer__contact h2 {
+        text-align: center !important;
+        margin-top: 30px !important;
+    }
+
+    .footer__subtitle {
+        font-size: 1.2rem;
+        padding: 30px 0 !important;
+        text-align: center !important;
+    }
+
+    .footer__contact-items {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: start;
+        justify-content: start;
+        gap: 10px;
+    }
+
+    .contact__item-title {
+        font-weight: bold;
+        margin-bottom: 10px !important;
+    }
+
+    .social__media {
+        font-weight: bold;
+        padding: 20px 0 !important;
+    }
+
+    .footer__copyright {
+        padding-top: 50px !important;
     }
     
 }
@@ -391,13 +463,14 @@ html, body {
     font-size: 2.5rem;
     margin-bottom: 50px;
     color: white;
+    text-align: center;
 }
 
 .testimonials {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 100px;
     max-width: 1200px;
     width: 100%;
     padding: 0 20px;
@@ -411,6 +484,14 @@ html, body {
     text-align: center;
 }
 
+.testimonial__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
 .testimonial__card h3 {
     font-size: 1.5rem;
     margin: 20px 0;
@@ -418,17 +499,87 @@ html, body {
 
 .testimonial__card p {
     font-size: 1rem;
+    font-style: italic;
     color: #8f8f8f;
     margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* Footer Section */
 
-#contact { 
+#footer__section { 
     background-color: #333; 
     color: white; 
     text-align: center; 
     padding: 20px; 
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 20px;
+}
+
+.footer__contact {
+    text-align: left;
+}
+
+.footer__contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.footer__contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.footer__subtitle {
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+.contact__item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.social__media {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.social-icon {
+    color: #00ADEF;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.social-icon:hover {
+    color: #0088cc;
+}
+
+.footer__contact-items a {
+    color: #c0c0c0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-view iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
 }
 
 /* Button */
@@ -449,4 +600,99 @@ html, body {
 .btn:hover {
     background-color: #0088cc;
     transition: all 0.3s ease;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #283890;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+/* Modal Styles */
+.modal__container {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal__content {
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.modal h2 {
+    color: #283890;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+#early-access-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#early-access-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #00ADEF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0088cc;
 }

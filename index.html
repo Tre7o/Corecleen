@@ -48,7 +48,7 @@
                     <h1>Welcome to <div>Corecleen</div></h1>
                     
                     <p>Your solution for clean and efficient services.</p>
-                    <button class="hero__btn"><a href="#contact">Get Started</a></button>
+                    <button class="hero__btn" id="cta">Get Started</button>
                 </div>
                 <div class="hero__image-container">
                     <img src="images/hero-image.svg" alt="Hero Image" id="hero__image">
@@ -87,13 +87,13 @@
         <h2>What Our Customers Say</h2>
         <div class="testimonials">
             <div class="testimonial__card">
-                <i class="fas fa-quote-left testimonial-icon fa-2x"></i>
+                <img src="images/italo-melo.jpg" alt="Customer Photo 1" class="testimonial__photo">
                 <h3>John Doe</h3>
                 <p>"Corecleen transformed our office! Highly recommend their services. The team is professional, efficient, and truly cares about quality. We've been using them for 6 months now and couldn't be happier!""</p>  
             </div>
 
             <div class="testimonial__card">
-                <i class="fas fa-quote-left testimonial-icon fa-2x"></i>
+                <img src="images/dziana-hasanbekava.jpg" alt="Customer Photo 2" class="testimonial__photo">
                 <h3>Emily Johnson</h3>
                 <p>
                     "After a long & tiring day, nothing
@@ -105,9 +105,61 @@
         </div>
     </section>
     
-    <section id="contact">
-        <p>&copy; 2023 Corecleen. All rights reserved.</p>
+    <section id="footer__section">
+        <div class="footer">
+            <div class="footer__contact">
+                <h2>Get In Touch</h2>
+                <p class="footer__subtitle">We're here to help! Reach out to us via phone or email.</p>
+                <div class="footer__contact-items">
+                    <div class="contact__item">
+                        <p class="contact__item-title">Phone: </p>
+                        <div><a href="tel: +256707265146" class="contact">+256 (0) 707265146 </a></div>
+                        <div><a href="tel: +256786151990" class="contact">+256 (0) 786151990 </a></div>
+                        <div><a href="tel: +256782923848" class="contact">+256 (0) 782923848 </a></div>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__item-title">Email: </p>
+                        <a href="mailto: corecleensolutions@gmail.com" class="contact">corecleensolutions@gmail.com</a>
+                    </div>
+                    <div class="contact__item">
+                        <p class="contact__item-title">Location: </p>
+                        <p>Plot 97 Bukoto Street opp. BIN IT Services</p>
+                        <p>P.O. Box 116729 Kampala, Uganda</p>
+                    </div>
+                </div>
+                <div class="social__media">
+                    <p>Follow us on social media:</p>
+                    <a href="https://www.facebook.com/corecleen" target="_blank"><i class="fab fa-facebook fa-2x social-icon"></i></a>
+                    <a href="https://www.twitter.com/corecleen" target="_blank"><i class="fab fa-twitter fa-2x social-icon"></i></a>
+                    <a href="https://www.instagram.com/corecleen" target="_blank"><i class="fab fa-instagram fa-2x social-icon"></i></a>
+                </div>
+            </div>
+            <div class="footer__map">
+                <div class="map-view">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d593.080507350383!2d32.583933216812106!3d0.3248814491884836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb07817e0743%3A0xf8bb8afcdb23f5e0!2sBin%20It%20Services%20Limited!5e0!3m2!1sen!2sug!4v1772839031295!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+               
+        </div>
+        <p id="footer__copyright">&copy; 2026 Corecleen. All rights reserved.</p>
     </section>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="arrow">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="modal__container">
+        <div class="modal">
+            <div class="modal__content">
+                <span class="close">&times;</span>
+                <h2>Sign Up for Early Access</h2>
+                <p>Be the first to know when we launch! Enter your email to get early access.</p>
+                <form id="early-access-form">
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="submit-btn">Get Early Access</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
